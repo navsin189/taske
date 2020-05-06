@@ -2,6 +2,15 @@
 <head>
 <Title> Naveen Kumar Singh </Title>
 <style>
+.header {
+  padding:0;
+  text-align: center;
+  font-family:courier;
+  background: #eee9e9;
+}
+body {
+  background-image: url('ironman.jpg');
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -11,7 +20,7 @@ ul {
 }
 
 li {
-  float: left;
+  float: right;
 }
 
 li a {
@@ -24,30 +33,94 @@ li a {
 }
 
 
-
-
+li a:hover:not(.active) {
+  background-color: #eee9e9;
+  color:Tomato;
+}
+.active{
+background-color: #4CAF50;
+}
+input[type=text],input[type=email],input[type=passwd] ,select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.footer {
+  padding:0;
+  text-align: center;
+  background: #ddd;
+  font-family:courier;
+  margin-top: 20px;
+}
 </style>
 </head>
 <body>
+<div class="header">
   <h3>Naveen Kumar Singh</h3>
+</div>
 <ul>
- <li><a class="active" href="#home">Home</a></li>
+  <li><a class="active" href="#home">Home</a></li>
   <li><a href="https://www.instagram.com/mr.knight_13/?hl=en" target=_blank>Instagram</a></li>
   <li><a href="https://www.facebook.com/nhi.bataunga.kabhi" target=_blank>Facebook</a></li>
   <li><a href="https://www.linkedin.com/in/navsin189" target=_blank>LinkedIn</a></li>
-  
 </ul><br><br>
 <form method=post>
-First Name<input type="text" id="fname" name="fname" placeholder="First name"><br>
-Last Name <input type="text" id="lname" name="lname" placeholder="Last name"><br>
-Gender<input type="radio" id="male" name="gender" value="male">Male
+<label for="fname"><b>First name:</b></label><br>
+  <input type="text" id="fname" name="fname" placeholder="First name"><br>
+  <label for="lname"><b>Last name:</b></label><br>
+  <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+  <label for="Gender"><b>Gender</b></label><br>
+  <input type="radio" id="male" name="gender" value="male">Male
   <input type="radio" id="female" name="gender" value="female">Female
-<br>
-Language<input type="checkbox" id="lang1" name="lang1" value="Python">Python
+  <input type="radio" id="other" name="gender" value="other">Other
+  <br><br>
+  <label for="Language"><b>Language</b></label><br>
+  <input type="checkbox" id="lang1" name="lang1" value="Python">Python
   <input type="checkbox" id="lang2" name="lang2" value="java">Java
   <input type="checkbox" id="lang3" name="lang3" value="C">C
 <br><br>
-<input type= submit value="Submit">
+  <label for="email"><b>Email-Id</b></label><br>
+  <input type=email id="email" name="email" placeholder="xyz@example.com">
+<br>
+  <label for="passwd"><b>Password</b></label><br>
+  <input type=passwd  id="passwd" name="passwd" placeholder="enter a new password ">
+  
+<br>
+<button class="button" >Submit</button>
+<input type= reset value="Reset">
 </form>
+<div class="footer">
+  <h3><b>Newbie in Technology and Master in learning</b></h3>
+</div>
 </body>
 </html>
